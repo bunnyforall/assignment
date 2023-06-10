@@ -1,0 +1,16 @@
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+// Endpoint to save form data
+app.post('/form', (req, res) => {
+ const formData = req.body;
+ // Perform any necessary validations on formData
+ // Save the formData to a database or perform any desired actions
+ // ...
+ res.json({ message: 'Form data saved successfully' });
+});
+// Start the server
+app.listen(3000, () => {
+ console.log('Server is running on port 3000');
+});
